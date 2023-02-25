@@ -33,19 +33,22 @@ public class AppMain extends SimpleApplication {
 
         settings.setBitsPerPixel(32);
         settings.setSamples(32);
-        settings.setFrameRate(120);
+        settings.setFrameRate(60);
         settings.setVSync(true);
         settings.setStencilBits(8);
         settings.setDepthBits(32);
-
+        viewPort.setBackgroundColor(ColorRGBA.White);
         //settings.setFrequency(120);
 
 
         if (release) {
 
-        BigCircle bigCircle = new BigCircle(this, ColorRGBA.White);
+        //BigCircle bigCircle = new BigCircle(this, ColorRGBA.Black)
+           BigArc bigArc = new BigArc(this, ColorRGBA.Black, new Vector3f(0, 0, 0), new Vector3f(4,0,0), new Vector3f (0,0,0));
 
-        } else {
+            } else {
+
+
 
         }
     }
