@@ -29,7 +29,9 @@ public class BigArc extends CurrencyMesh{
         int cool = 60;
         for (int i = 0; i < cool * archA.distance(archB); i++){
 
-            bigCircles.add(new BigCircle(app, color, new Vector3f((float)(((sinitude.x) + (((archA.x + archB.x) / 2) + ((i * (archA.x + archB.x)/cool)) + Math.cos(Math.toRadians((i / 1080)/1080))))), (float)(((sinitude.y) + (((archA.y + archB.y) / 2) + ((i * (archA.y + archB.y)/cool)) + Math.sin(Math.toRadians((i / 1080)/1080))))),(((sinitude.z)) + (((archA.z + archB.z) / 2) + ((i * (archA.z + archB.z)/cool) * 1))))));
+           // System.out.println(Math.sin(Math.toRadians((i * 1080)/1080)));
+
+            bigCircles.add(new BigCircle(app, color, new Vector3f((float)(((sinitude.x) + (((archA.x + archB.x) / 2) + ((i * (archA.x + archB.x)/cool)) + Math.cos(Math.toRadians((i * 1080)/1080))))), (float)(((sinitude.y) + (((archA.y + archB.y) / 2) + ((i * (archA.y + archB.y)/cool)) + Math.sin(Math.toRadians((i * 1080)/1080))))),(((sinitude.z)) + (((archA.z + archB.z) / 2) + ((i * (archA.z + archB.z)/cool) * 1))))));
 
         }
 
