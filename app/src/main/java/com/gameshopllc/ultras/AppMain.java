@@ -44,7 +44,7 @@ public class AppMain extends SimpleApplication {
         if (release) {
 
         //BigCircle bigCircle = new BigCircle(this, ColorRGBA.Black)
-           BigArc bigArc = new BigArc(this, ColorRGBA.Black, new Vector3f(0, 0, 0), new Vector3f(4,0,0), new Vector3f (0,0,0));
+           BigArc bigArc = new BigArc(this, ColorRGBA.Black, new Vector3f(0, 0, 0), new Vector3f(5,0,0), new Vector3f (0f,-2.5f,0));
 
             } else {
 
