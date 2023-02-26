@@ -11,7 +11,6 @@ import com.jme3.scene.Node;
 import com.jme3.scene.VertexBuffer.Type;
 import com.jme3.util.BufferUtils;
 import java.util.ArrayList;
-import java.util.function.ToDoubleFunction;
 
 /**
  *
@@ -49,7 +48,7 @@ public class Poly {
         updateRender();
 
 
-        geo = new Geometry("OurMesh", mesh); // using our custom mesh object
+        geo = (new Geometry("OurMesh", mesh)); // using our custom mesh object
         mat = new Material(app.getAssetManager(),
                 "Common/MatDefs/Misc/Unshaded.j3md");
         mat.setColor("Color", color);
@@ -79,4 +78,5 @@ public class Poly {
 
         mesh.updateBound();
     }
+
 }

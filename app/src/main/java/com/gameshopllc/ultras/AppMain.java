@@ -1,21 +1,8 @@
 package com.gameshopllc.ultras;
 import com.jme3.app.SimpleApplication;
-import com.jme3.app.state.VideoRecorderAppState;
-import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
-import com.jme3.math.Vector2f;
-import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Geometry;
-import com.jme3.scene.Mesh;
-import com.jme3.scene.Node;
-import com.jme3.scene.VertexBuffer.Type;
-import com.jme3.scene.shape.Box;
-import com.jme3.system.AppSettings;
-import com.jme3.util.BufferUtils;
-
-import java.io.File;
-import java.util.ArrayList;
 
 /**
  * @author lyndenjayevans
@@ -27,7 +14,7 @@ public class AppMain extends SimpleApplication {
      * False When Focusing On One Model.
      * */
     boolean release = true;
-
+    LyndenJayEvans lyndenJayEvans;
     @Override
     public void simpleInitApp() {
 
@@ -44,8 +31,9 @@ public class AppMain extends SimpleApplication {
         if (release) {
 
         //BigCircle bigCircle = new BigCircle(this, ColorRGBA.Black)
-           BigArc bigArc = new BigArc(this, ColorRGBA.Black, new Vector3f(0, 0, 0), new Vector3f(5,0,0), new Vector3f (0f,-2.5f,0));
+           //BigArc bigArc = new BigArc(this, ColorRGBA.Black, new Vector3f(0, 0, 0), new Vector3f(5,0,0), new Vector3f (0f,-2.5f,0));
 
+             lyndenJayEvans = new LyndenJayEvans(this);
             } else {
 
 
@@ -60,6 +48,11 @@ public class AppMain extends SimpleApplication {
         if (release) {
 
 
+           // this.cam.lookAt(lyndenJayEvans.allCircles.get(0).vertices.get(0), Vector3f.UNIT_Y); Wrong Equation, Freezes Camera
+
+            for (BigCircle circle: lyndenJayEvans.allCircles) {
+                circle.poly.geo.rotate(0, 0.05f, 0);
+            }
         } else {
             //chessTileBase = new ChessTileBase(this);
             //chessTileBase.updateRender();
