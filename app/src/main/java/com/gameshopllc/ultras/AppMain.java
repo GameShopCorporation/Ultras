@@ -52,7 +52,7 @@ public class AppMain extends SimpleApplication {
 
             for (BigCircle circle: lyndenJayEvans.allCircles) {
 
-                float theCoinFlip = circle.poly.geo.getLocalTranslation().y - this.cam.getDirection().y;
+                float theCoinFlip = circle.poly.geo.getLocalTranslation().y + this.cam.getDirection().y;
                 circle.poly.geo.rotate(0, theCoinFlip, 0);
 
             }
