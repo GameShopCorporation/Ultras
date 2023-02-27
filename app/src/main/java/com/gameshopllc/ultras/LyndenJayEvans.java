@@ -30,7 +30,7 @@ public class LyndenJayEvans extends CurrencyMesh{
 
          archA = new Vector3f(0,0,0);
          archB = new Vector3f(0.000001f,0,0);
-        cool = 60;
+         cool = 60;
         for (int i = 0; i < cool * archA.distance(archB); i++){
 
             // System.out.println(Math.sin(Math.toRadians((i * 1080)/1080)));  + (((archA.z + archB.z) / 2)

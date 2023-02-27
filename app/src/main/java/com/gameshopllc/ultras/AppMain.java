@@ -51,7 +51,10 @@ public class AppMain extends SimpleApplication {
            // this.cam.lookAt(lyndenJayEvans.allCircles.get(0).vertices.get(0), Vector3f.UNIT_Y); Wrong Equation, Freezes Camera
 
             for (BigCircle circle: lyndenJayEvans.allCircles) {
-                circle.poly.geo.rotate(0, 0.05f, 0);
+
+                float theCoinFlip = circle.poly.geo.getLocalTranslation().y - this.cam.getDirection().y;
+                circle.poly.geo.rotate(0, theCoinFlip, 0);
+
             }
         } else {
             //chessTileBase = new ChessTileBase(this);
