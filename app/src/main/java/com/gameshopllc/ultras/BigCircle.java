@@ -39,4 +39,12 @@ public class BigCircle extends CurrencyMesh{
         poly = new Poly(app, vertices, texCoord, indexes, color);
 
     }
+
+    @Override
+    public void updateRender(){
+
+        //for (Poly poly: polys){
+        poly.updateRender();
+        //  }
+    }
 }
